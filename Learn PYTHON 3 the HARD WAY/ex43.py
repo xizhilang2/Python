@@ -1,6 +1,8 @@
 from sys import exit
 from random import randint
 from textwrap import dedent
+import pysnooper
+
 
 class Scene(object):
 
@@ -10,7 +12,7 @@ class Scene(object):
         exit(1)
 
 class Engine(object):
-
+    @pysnooper.snoop()
     def __init__(self, scene_map):
         self.scene_map = scene_map
 
